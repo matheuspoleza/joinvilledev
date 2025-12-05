@@ -5,8 +5,7 @@ export const meta: MetaFunction = () => [
   { title: 'joinville.dev — Comunidade de devs em Joinville' }
 ];
 
-const WHATSAPP_LINK =
-  'https://wa.me/5547999999999?text=Quero%20entrar%20na%20comunidade%20joinville.dev'; // TODO: ajuste o número/link real
+const WHATSAPP_LINK = 'https://chat.whatsapp.com/LvLJ7PIuu7U9VgXGynxqQa';
 
 export default function IndexRoute() {
   return (
@@ -24,7 +23,9 @@ export default function IndexRoute() {
             </div>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://x.com/joinvilledev"
+                target="_blank"
+                rel="noreferrer"
                 className="w-6 h-6 flex items-center justify-center text-zinc-400 hover:text-foreground transition-colors"
                 aria-label="X/Twitter"
               >
@@ -37,7 +38,9 @@ export default function IndexRoute() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://x.com/joinvilledev"
+                target="_blank"
+                rel="noreferrer"
                 className="w-6 h-6 flex items-center justify-center text-zinc-400 hover:text-foreground transition-colors"
                 aria-label="Instagram"
               >
@@ -79,7 +82,7 @@ export default function IndexRoute() {
             />
             <EventCardLarge
               title="fullstackin.joinville.dev"
-              description="Um dia inteiro falando de front, back e tudo no meio — para quem vive de ponta a ponta."
+              description="Meetup focado em melhores práticas de desenvolvimento fullstack em qualquer framework ou linguagem."
               status="em breve"
             />
           </div>
@@ -156,11 +159,11 @@ export default function IndexRoute() {
                   <Tooltip.Content
                     side="top"
                     align="center"
-                    sideOffset={10}
-                    className="rounded-xl bg-zinc-900/95 border border-zinc-700 px-3 py-2 text-xs text-zinc-100 shadow-xl backdrop-blur"
+                    sideOffset={12}
+                    className="rounded-xl bg-zinc-800 border border-zinc-600 px-4 py-2.5 text-xs text-zinc-100 shadow-2xl z-50"
                   >
                     Link direto pro grupo. Sem spam, só dev de Joinville.
-                    <Tooltip.Arrow className="fill-zinc-900/95" />
+                    <Tooltip.Arrow className="fill-zinc-800" />
                   </Tooltip.Content>
                 </Tooltip.Portal>
               </Tooltip.Root>
@@ -280,7 +283,7 @@ function EventCardLarge({ title, description, status }: EventCardLargeProps) {
           {status}
         </span>
       </div>
-      <p className="text-sm md:text-base text-zinc-300 leading-relaxed flex-1">{description}</p>
+      <p className="text-sm md:text-base text-zinc-300 leading-relaxed flex-1 font-medium">{description}</p>
     </div>
   );
 }
