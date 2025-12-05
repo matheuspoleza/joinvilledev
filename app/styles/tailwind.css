@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --joinville-font: 'JoinvilleGrotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+      'Segoe UI', sans-serif;
+  }
+
+  @font-face {
+    font-family: 'JoinvilleGrotesk';
+    src: url('/fonts/font-1.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'JoinvilleGrotesk';
+    src: url('/fonts/font-2.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'JoinvilleGrotesk';
+    src: url('/fonts/font-3.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--joinville-font);
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    66% {
+      transform: translateY(10px) rotate(-5deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+
